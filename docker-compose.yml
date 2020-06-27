@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db-bkp-postgres:
+    build: .
+    volumes:
+       - ./:/opt
+    command: sh /opt/start-backup-no-docker.sh
+    networks:
+       - backend
+
+networks:
+  backend:
+    external:
+      name: backend
