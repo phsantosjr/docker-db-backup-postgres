@@ -1,2 +1,2 @@
-tinys3==0.1.11
+tinys3==0.1.12
 environs==8.0.0
