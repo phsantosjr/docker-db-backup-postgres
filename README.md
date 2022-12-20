@@ -1,8 +1,8 @@
-# Projeto Docker para Backup do PostGreSql e enviar para S3 #
+# Projeto Docker para Backup do PostgreSQL e enviar para S3 #
 
-![](https://img.shields.io/badge/Python-3.6-blue.svg)
+![](https://img.shields.io/badge/Python-3.10-blue.svg)
 
-Esse projeto faz o backup de uma base de dados PostGreSQL e envia para um Bucket no AWS S3
+Esse projeto faz o backup de uma base de dados PostgreSQL e envia para um Bucket no AWS S3
 
 
 ### Arquivo .env ###
@@ -27,7 +27,7 @@ PG_PWD=''
 - execute o comando:
 
 ```
-docker-compose up --force-recreate --build db-bkp-postgres
+docker compose up --force-recreate --build db-bkp-postgres
 ```
 
 ### Docker Network - se for rodar na mesma rede ###
