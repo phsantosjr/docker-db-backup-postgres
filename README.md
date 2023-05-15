@@ -1,11 +1,10 @@
-# Projeto Docker para Backup do PostgreSQL e enviar para S3 #
-
+# Docker Backup PostgreSQL para providers de Cloud
 ![](https://img.shields.io/badge/Python-3.10-blue.svg)
 
 Esse projeto faz o backup de uma base de dados PostgreSQL e envia para um Bucket no AWS S3
 
 
-### Arquivo .env ###
+### Arquivo .env
 
 Renomear o arquivo .env_sample ou criar um outro arquivo .env com estrutura
 
@@ -18,10 +17,13 @@ PG_PORT=''
 PG_DATABASE=''
 PG_USER=''
 PG_PWD=''
+PROVIDER=''
+ENDPOINT_URL=''
+REGION='' 
 
 ``` 
 
-### Como rodar ? ###
+### Como rodar ?
 
 - Configure um arquivo .env
 - execute o comando:
@@ -30,7 +32,7 @@ PG_PWD=''
 docker compose up --force-recreate --build db-bkp-postgres
 ```
 
-### Docker Network - se for rodar na mesma rede ###
+### Docker Network - se for rodar na mesma rede
 
 Verifique se o seu banco Postgres está na mesma rede (network) do Docker.
 
@@ -42,7 +44,7 @@ networks:
 ```
 
 
-### Criar um Cron ###
+### Criar um Cron
 
 Se executar o processo pelo CRON do Linux:
 
