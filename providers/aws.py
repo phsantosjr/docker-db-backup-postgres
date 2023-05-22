@@ -8,14 +8,14 @@ from interfaces.provider import ProviderInterface
 @dataclass(slots=True)
 class Aws(ProviderInterface):
     secret_access_key: str = ""
-    secret_access_id: str = ""
+    access_key_id: str = ""
     bucket_name: str = ""
     region: str = ""
     endpoint_url: str = ""
 
     def upload(self, file):
         try:
-            conn = tinys3.Connection(self.secret_access_id, self.secret_access_key)
+            conn = tinys3.Connection(self.access_key_id, self.secret_access_key)
             f = open(file, 'rb')
             conn.upload(file, f, self.bucket_name)
 

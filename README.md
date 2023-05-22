@@ -23,15 +23,6 @@ REGION=''
 
 ``` 
 
-### Como rodar ?
-
-- Configure um arquivo .env
-- execute o comando:
-
-```
-docker compose up --force-recreate --build db-bkp-postgres
-```
-
 ### Docker Network - se for rodar na mesma rede
 
 Verifique se o seu banco Postgres está na mesma rede (network) do Docker.
@@ -41,6 +32,15 @@ networks:
   backend:
     external:
       name: backend
+```
+
+### Como rodar ?
+
+- Configure um arquivo .env
+- execute o comando:
+
+```
+docker compose up --force-recreate --build db-bkp-postgres
 ```
 
 
